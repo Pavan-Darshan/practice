@@ -1,0 +1,31 @@
+body{
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
+}
+h1 {
+    color: rgb(229, 245, 10);
+  }
+pre{
+    background-color: aquamarine;
+    border: 6px solid rgb(10, 10, 249);
+    padding: 20px;
+
+}
+address{
+    margin-left: 100px;
+}
+table, th ,td{
+    border: 1px solid black;
+    border-collapse:collapse ;
+    border-style:dashed;
+    
+}
+tr:nth-child(even) {
+    background-color: rgba(236, 144, 144, 0.4);
+  }
+  tr:hover{
+    background-color: darkkhaki;
+  }
