@@ -1,0 +1,127 @@
+p{
+    position: relative;
+    font-family: cursive,'Times New Roman';
+    font-style: italic;
+    font-weight:bolder;
+    font-size: 1.5em;
+}
+h4{
+    font-family:"Sofia",sans-serif;
+    font-variant: small-caps;
+    
+}
+h1{
+    font-family: 'Fauna One',serif;
+}
+/* a{
+    color: blue;
+    font-size: 25px;
+    text-decoration: none;
+}
+a:hover{
+    color:red;
+    text-decoration: underline;
+    cursor: wait;
+} */
+table{
+    width: 500px;
+    position: sticky;
+    top: 100px;
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+   
+    
+}
+tr:hover{
+    background-color: bisque;
+}
+.stic{
+    width: 200px;
+    border: 1px dashed red;
+    position: sticky;
+    top: 0px;
+}
+.wid{
+    border: 1px solid green;
+    width: 600px;
+    height: 100px;
+    margin: auto;
+    
+}
+.wid1{
+    border: 1px solid green;
+    max-width: 600px;
+    margin: auto;
+}
+button{
+    width: 100px;
+    height: 45px;
+    font-size: 18px;
+    background-color: rgb(169, 169, 245);
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    border-radius: 15px;
+}
+img{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 300px;
+    right: 250px;
+    z-index: -1;
+    
+}
+.overflow{
+    margin-left: 100px;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: cornsilk;
+    font-size: 10px;
+    overflow: auto;
+}
+::selection{
+    color: red;
+    background-color: yellow;
+}
+
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 15px;
+    opacity: 0.8;
+    
+  }
+  
+  li {
+    float: left;
+   
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 36px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #a79f9f;
+  }
+  .target_attribute{
+    font-size: 20px;
+  }
+  .target_attribute a[target]{
+    background-color: yellow;
+    width: calc(100% - 6px);
+  }
