@@ -1,0 +1,177 @@
+p{
+    background-color: red !important;
+    width: max(50%,400px,600px);
+
+
+}
+#imp{
+    background-color: blue !important;
+    
+}
+.imp1{
+    background-color: blanchedalmond !important;
+}
+.math{
+    background-color: beige;
+    width: calc(100% - 200px);
+    
+    
+}
+.radius{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(83, 246, 83);
+    padding-top: 10px;
+    padding-left: 10px;
+    color: red;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+.borderImage{
+    background-color: rgb(207, 229, 255);
+    width: 600px;
+    height: 100px;
+    font-size: 28px;
+    text-align: center;
+    border: 16px solid transparent;
+    border-image: url(/images/border.png) 30 stretch;
+}
+.multiple_back{
+    width: 600px;
+    height: 400px;
+    background-image:url(/images//flower_background.jpg), url(/images/paper_back.jpg);
+    
+    background-position:right bottom,left top;
+    background-repeat: no-repeat,no-repeat;
+    background-size: 200px 200px,cover;
+    border: 1px solid black;
+   
+}
+.origin{
+    width: 300px;
+    height: 300px;
+    color: blue;
+    border: 10px solid currentColor;
+    background-repeat: no-repeat;
+    background: url(/images/flower_background.jpg);
+    background-origin: border-box;
+}
+h1{
+    text-align: center;
+    color: blue;
+    font-size: 36px;
+    text-shadow: 3px 3px 5px red,0px 0px 5px yellow;
+}
+.boxshadow{
+    width: 300px;
+    height: 150px;
+    background-color: rgb(246, 168, 90);
+    margin: auto;
+    box-shadow: 10px 10px 5px 8px blue inset ;
+
+}
+.overflow{
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid black;
+    background-color: wheat !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@font-face {
+    font-family: myfont;
+    src: url(sansation_light.woff);
+ }
+.horizontal{
+    font-family: myfont;
+    color: red;
+    writing-mode: vertical-lr;
+}
+.transform{
+    width: 200px;
+    height: 200px;
+    background-image:radial-gradient(red ,yellow,blue,pink);
+    margin: auto;
+    /* transform:translate(400px,0px); */
+    /* transform: skewX(-40deg); */
+    /* transform: matrix(1.5,0,0,1.5,2,2); */
+    /* transition: all 6s; */
+    transition: width 4s,height 4s,transform 4s;
+    transition-timing-function: ease-in;
+    transition-delay: 1s;
+    
+
+}
+.transform:hover{
+   width: 400px;
+   height: 400px;
+    transform: rotate(720deg) ;
+}
+.animations{
+    width: 180px;
+    height: 180px;
+    
+    color: black;
+    font-size: 100px;
+   padding-left: 60px;
+   padding-top: 60px;
+    position: relative;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px 12px rgb(174, 172, 182) inset;
+    animation-name: change ;
+    animation-duration: 8s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+@keyframes change {
+    /* from{
+        background-color: red; 
+    }
+    to{
+        background-color: yellow;   
+    }
+     */
+     /* 0% {background-color: red;}
+     25% {background-color: yellow;}
+     50% {background-color: blue;}
+     100% {background-color: green;} */
+     0%   
+     {background-color:red; left:0px; top:0px;}
+  25%  
+  {background-color:yellow; left:600px; top:0px;}
+  50%  
+  {background-color:blue; left:600px; top:600px;}
+  75%  
+  {background-color:green; left:0px; top:600px;}
+  100% 
+  {background-color:red; left:0px; top:0px;}
+}
+.tooltip{
+    position: relative;
+    display: inline-block;
+    
+    background-color: rgb(156, 251, 251);
+    font-size: 32px;
+
+}
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 220px;
+    margin-left: -220px;
+    bottom: 100%;
+    text-align: center;
+    background-color: red;
+    position: absolute;border-radius: 10px;
+
+    opacity: 0;
+  transition: opacity 1s;
+   
+}
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+    opacity: 1;
+
+}
