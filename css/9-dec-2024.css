@@ -157,7 +157,7 @@ h1{
     font-size: 32px;
 
 }
-.tooltip .tooltiptext{
+.tooltip.tooltiptext{
     visibility: hidden;
     width: 220px;
     margin-left: -220px;
