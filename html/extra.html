@@ -17,6 +17,7 @@
     <body>
       
         <p  id="demo"></p>
+        <!-- <p  id="demo1"></p> -->
 
         <p  id="display"></p>
         <!-- <img  id="image" src="/images/flower_background.jpg" alt=""> -->
@@ -26,11 +27,25 @@
             </div>
             
 
+            <input id="formId" type="number" min="100" max="300" required>
+            <button onclick="myFunction()">OK</button>
+            <h4 id="status"></h4>
 
 
         <script src="/js/extra.js"></script>
 
-        
+
+        <button onclick="back()">Google</button>
+        <button onclick="back1()">Go -2 back</button>
+
+        <p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+<h4 id="myJson"></h4>
+
+
+
+
     </body>
     
 </html>

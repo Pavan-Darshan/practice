@@ -275,7 +275,125 @@ document.getElementById("demo").style.color = "blue";
 
   const block=document.getElementById("div1");
   block.appendChild(para);
+  console.log("-------------------------------");
+  
 
 //   block.remove();
-document.getElementById("demo1").innerHTML =
-"Page location is " + window.location.href;
+// document.getElementById("demo1").innerHTML =
+// "Page location is " + window.location.href;
+
+// let c=document.cookie;
+// document.cookie = "username=Pavan Darshan; expires=Mon, 17 Dec 2024 12:00:00 UTC";
+
+// console.log(c);
+const myObj = JSON.parse('{"name":"Pavan", "age":28, "city":"Madikeri"}');
+
+console.log(myObj);
+
+
+const text = '{"name":"MyName Special", "age":"function () {return 50;}", "city":"New York"}';
+const obj2 = JSON.parse(text);
+obj2.age=eval('('+obj2.age+')');
+console.log(obj2.name + ", " + obj2.age());
+
+
+
+const jsonstr=JSON.stringify(myObj);
+console.log("Json data : "+jsonstr);
+localStorage.setItem("textJson",jsonstr);  // storing the data into local storage as text format
+
+
+let txt=localStorage.getItem("textJson");
+let getObj=JSON.parse(txt);
+console.log("Loacal storage data : "+getObj.name+" "+getObj.age);
+
+
+function myFunction() {
+    const inpObj = document.getElementById("formId");
+    if (!inpObj.checkValidity()) {
+      document.getElementById("status").innerHTML = inpObj.validationMessage;
+    }
+  }
+
+  function back(){
+    // location.assign("https://www.google.co.in/");
+    window.history.back();
+  }
+  function back1(){
+    window.history.go(-2);
+  }
+
+//   console.log(location.href);               // location.href
+//   location.href="https://www.google.co.in/"
+
+console.log(location.origin);
+
+
+
+console.log("--------------------------------web worker------------------");
+
+if(typeof(Worker)!=="undefined"){
+        console.log("Yes, web worker supports ");
+        
+}
+else{
+    console.log("No web worker supports ");
+}
+
+
+let w;
+
+function startWorker() {
+  if (typeof(w) == "undefined") {
+    w=new Worker("/js/web_worker.js");
+  }
+  w.onmessage = function(event) {
+    document.getElementById("result").innerHTML = event.data;
+  };
+}
+
+function stopWorker() {
+  w.terminate();
+  w = undefined;
+}
+
+
+let file = "https://jsonplaceholder.typicode.com/users";
+
+fetch(file)
+.then(x=> x.text())
+.then(y=> document.getElementById("myJson").innerHTML=y+"\n");
+
+
+console.log("--------------------json fetch-----------------");
+
+
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Respond ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log('Data received:', data);
+  
+         let text = "<table border='1'>"
+for (const key in data) {
+//    console.log(data[key].id+" : "+ data[key].username+"<----->"+data[key].email);
+       text+="<tr><td>"+data[key].username+"<td><tr>";
+}
+text+="</table>";
+
+   document.getElementById("json_table")=text;
+})
+  .catch(error => {
+    console.error('There was a problem ', error);
+  });
+
+
+  
+
+
+
+  
